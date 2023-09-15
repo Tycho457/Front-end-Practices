@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="triangle"></div>
+    <div class="circle"></div>
+    <div class="trapezoid"></div>
+    <div class="sector"></div>
+    <div class="ring"></div>
+</body>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .triangle {
+        width: 0px;
+        border-top: 300px solid red;
+        border-right: 300px solid transparent;
+        border-left: 300px solid transparent;
+    }
+
+    .circle {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .trapezoid {
+        width: 100px;
+        border-top: 300px solid red;
+        border-right: 300px solid transparent;
+        border-left: 300px solid transparent;
+    }
+
+    .sector {
+        width: 0px;
+        border-top: 300px solid red;
+        border-right: 300px solid transparent;
+        border-left: 300px solid transparent;
+        border-radius: 50%;
+    }
+
+    .ring {
+        width: 300px;
+        height: 300px;
+        border: 10px solid red;
+        border-radius: 50%;
+        background-color: transparent;
+    }
+</style>
+
+</html>
