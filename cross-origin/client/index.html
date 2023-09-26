@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSONP Example</title>
+</head>
+
+<body>
+    <h1>JSONP Example</h1>
+    <button id="getDataButton">Get Data</button>
+    <div id="result"></div>
+
+    <script>
+        // JSONP回调函数
+        function handleResponse(data) {
+            document.getElementById("result").innerHTML = "Data received: " + JSON.stringify(data);
+        }
+
+        // 触发JSONP请求的函数
+        function fetchData() {
+            // 创建一个script元素
+            let script = document.createElement("script");
+            // 设置要请求的URL，包括回调函数名
+            let url = "http://localhost:3000/api/data?callback=handleResponse";
+
+            // 将script元素的src属性设置为JSONP请求的URL
+            script.src = url;
+
+            // 将script元素添加到文档中，触发请求
+            document.body.appendChild(script);
+        }
+
+        // 绑定按钮点击事件
+        document.getElementById("getDataButton").addEventListener("click", fetchData);
+    </script>
+</body>
+
+</html>
